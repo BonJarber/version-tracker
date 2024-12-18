@@ -1,5 +1,8 @@
 name: Check Browser Versions
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 0 * * *'  # Run at midnight UTC daily
