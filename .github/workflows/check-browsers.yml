@@ -1,0 +1,43 @@
+name: Check Browser Versions
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run at midnight UTC daily
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  check-versions:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install httpx jsonschema
+
+    - name: Run Chrome version checker
+      run: python scripts/checkers/chrome_checker.py
+      
+    - name: Run Firefox version checker
+      run: python scripts/checkers/firefox_checker.py
+      
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+        
+    - name: Commit changes if needed
+      if: steps.git-check.outputs.changes == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/browsers/*.json
+        git commit -m "Update browser versions"
+        git push
