@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": ["name", "identifier", "type", "versions", "metadata"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Full name of the product"
+      },
+      "identifier": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$",
+        "description": "Lowercase identifier with no spaces"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["browser", "database", "os", "language"],
+        "description": "Category of software"
+      },
+      "versions": {
+        "type": "object",
+        "required": ["stable"],
+        "properties": {
+          "stable": {
+            "type": "object",
+            "required": ["version"],
+            "properties": {
+              "version": {
+                "type": ["string", "null"],
+                "description": "Current stable version"
+              },
+              "release_date": {
+                "type": ["string", "null"],
+                "format": "date",
+                "description": "Release date of this version"
+              }
+            }
+          }
+        },
+        "additionalProperties": {
+          "type": "object",
+          "required": ["version"],
+          "properties": {
+            "version": {
+              "type": ["string", "null"]
+            },
+            "release_date": {
+              "type": ["string", "null"],
+              "format": "date"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "required": ["last_checked"],
+        "properties": {
+          "last_checked": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "description": "When the version was last checked"
+          },
+          "check_method": {
+            "type": "string",
+            "enum": ["api", "scrape", "feed"],
+            "description": "Method used to check versions"
+          },
+          "check_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL used to check versions"
+          }
+        }
+      }
+    }
+  }
