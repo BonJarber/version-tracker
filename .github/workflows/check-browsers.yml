@@ -27,10 +27,13 @@ jobs:
 
     - name: Run Chrome version checker
       run: python scripts/checkers/chrome_checker.py
-      
+
     - name: Run Firefox version checker
       run: python scripts/checkers/firefox_checker.py
-      
+
+    - name: Run Safari version checker
+      run: python scripts/checkers/safari_checker.py
+
     - name: Check for changes
       id: git-check
       run: |
