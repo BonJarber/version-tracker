@@ -4,11 +4,11 @@
   "type": "browser",
   "versions": {
     "stable": {
-      "version": "131.0.6778.0"
+      "version": "131.0.6778.135"
     }
   },
   "metadata": {
-    "last_checked": "2024-12-17T23:49:39.370672Z",
+    "last_checked": "2024-12-18T00:13:18.506637Z",
     "check_method": "api",
     "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/all/channels/stable/versions"
   }
