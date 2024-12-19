@@ -22,31 +22,11 @@ Thank you for your interest in contributing to Version Tracker! This document ou
 
 3. **Required Files**
    ```
-   data/<category>/<product>.json         # Initial product data
-   scripts/checkers/<product>_checker.py  # Version checker implementation
-   tests/checkers/test_<product>.py       # Test suite for the checker
+   scripts/checkers/<product>.py       # Version checker implementation
+   tests/checkers/test_<product>.py    # Test suite for the checker
    ```
 
-4. **Data File Structure**
-   ```json
-   {
-     "name": "Product Name",
-     "identifier": "product-id",
-     "type": "<category>",
-     "versions": {
-       "stable": {
-         "version": null
-       }
-     },
-     "metadata": {
-       "last_checked": null,
-       "check_method": "api|scrape|feed",
-       "check_url": "https://api.example.com/versions"
-     }
-   }
-   ```
-
-5. **Testing Requirements**
+4. **Testing Requirements**
    - Version checker must have unit tests
    - Tests must cover:
      - Successful version fetching
@@ -54,7 +34,7 @@ Thank you for your interest in contributing to Version Tracker! This document ou
      - JSON schema validation
      - Data file reading/writing
 
-6. **Pull Request Process**
+5. **Pull Request Process**
    1. Fork the repository
    2. Create a feature branch
    3. Implement your changes

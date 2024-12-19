@@ -14,39 +14,44 @@
       },
       "type": {
         "type": "string",
-        "enum": ["browser", "database", "os", "language"],
+        "enum": ["browser", "database", "os", "language", "runtime"],
         "description": "Category of software"
+      },
+      "platforms": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["windows", "macos", "linux", "ios", "android", "web"]
+        },
+        "description": "List of supported platforms"
       },
       "versions": {
         "type": "object",
-        "required": ["stable"],
+        "required": ["platforms"],
         "properties": {
-          "stable": {
+          "platforms": {
             "type": "object",
-            "required": ["version"],
-            "properties": {
-              "version": {
-                "type": ["string", "null"],
-                "description": "Current stable version"
-              },
-              "release_date": {
-                "type": ["string", "null"],
-                "format": "date",
-                "description": "Release date of this version"
+            "patternProperties": {
+              "^(windows|macos|linux|ios|android|web)$": {
+                "type": "object",
+                "required": ["version", "check_url", "check_method"],
+                "properties": {
+                  "version": {
+                    "type": "string",
+                    "description": "Current version"
+                  },
+                  "check_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL used to check versions for this platform"
+                  },
+                  "check_method": {
+                    "type": "string",
+                    "enum": ["api", "scrape", "feed"],
+                    "description": "Method used to check versions for this platform"
+                  }
+                }
               }
-            }
-          }
-        },
-        "additionalProperties": {
-          "type": "object",
-          "required": ["version"],
-          "properties": {
-            "version": {
-              "type": ["string", "null"]
-            },
-            "release_date": {
-              "type": ["string", "null"],
-              "format": "date"
             }
           }
         }
@@ -56,19 +61,9 @@
         "required": ["last_checked"],
         "properties": {
           "last_checked": {
-            "type": ["string", "null"],
+            "type": "string",
             "format": "date-time",
             "description": "When the version was last checked"
-          },
-          "check_method": {
-            "type": "string",
-            "enum": ["api", "scrape", "feed"],
-            "description": "Method used to check versions"
-          },
-          "check_url": {
-            "type": "string",
-            "format": "uri",
-            "description": "URL used to check versions"
           }
         }
       }

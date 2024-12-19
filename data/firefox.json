@@ -1,0 +1,38 @@
+{
+  "name": "Mozilla Firefox",
+  "identifier": "firefox",
+  "type": "browser",
+  "platforms": [
+    "windows",
+    "macos",
+    "ios",
+    "android"
+  ],
+  "versions": {
+    "platforms": {
+      "windows": {
+        "version": "133.0.3",
+        "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+        "check_method": "api"
+      },
+      "macos": {
+        "version": "133.0.3",
+        "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+        "check_method": "api"
+      },
+      "ios": {
+        "version": "133.0.3",
+        "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
+        "check_method": "api"
+      },
+      "android": {
+        "version": "133.0.3",
+        "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
+        "check_method": "api"
+      }
+    }
+  },
+  "metadata": {
+    "last_checked": "2024-12-18T21:31:13.024864Z"
+  }
+}

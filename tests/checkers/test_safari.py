@@ -1,112 +1,62 @@
 import pytest
-import json
-from pathlib import Path
-import httpx
-from datetime import datetime
-from unittest.mock import Mock, patch
-from scripts.checkers.safari_checker import SafariVersionChecker
+from scripts.checkers.safari import SafariVersionChecker
+from .conftest import MockResponse
 
-
-@pytest.fixture
-def safari_data(tmp_path):
-    """Create a temporary Safari data file."""
-    data = {
-        "name": "Apple Safari",
-        "identifier": "safari",
-        "type": "browser",
-        "versions": {"stable": {"version": "18.0"}},
-        "metadata": {
-            "last_checked": "2024-12-17T00:00:00Z",
-            "check_method": "api",
-            "check_url": "https://developer.apple.com/tutorials/data/documentation/safari-release-notes.json",
-        },
-    }
-
-    browsers_dir = tmp_path / "browsers"
-    browsers_dir.mkdir()
-    data_file = browsers_dir / "safari.json"
-
-    with open(data_file, "w") as f:
-        json.dump(data, f)
-    return data_file
-
-
-@pytest.fixture
-def mock_safari_response():
-    """Mock Safari API response."""
-    return {
-        "topicSections": [
+MOCK_SAFARI_RESPONSE = {
+    "interfaceLanguages": {
+        "swift": [
             {
-                "identifiers": [
-                    "doc://com.apple.Safari-Release-Notes/documentation/Safari-Release-Notes/safari-18_0-release-notes"
+                "children": [
+                    {"title": "Version 18", "type": "groupMarker"},
+                    {
+                        "path": "/documentation/safari-release-notes/safari-18_3-release-notes",
+                        "title": "Safari 18.3 Beta Release Notes",
+                        "type": "article",
+                    },
+                    {
+                        "path": "/documentation/safari-release-notes/safari-18_2-release-notes",
+                        "title": "Safari 18.2 Release Notes",
+                        "type": "article",
+                    },
                 ]
             }
         ]
     }
+}
 
 
-class TestSafariVersionChecker:
-    @pytest.mark.asyncio
-    async def test_fetch_latest_version_success(self, mock_safari_response):
-        """Test successful version fetch."""
-        with patch("httpx.AsyncClient.get") as mock_get:
-            mock_get.return_value = Mock(
-                raise_for_status=Mock(), json=Mock(return_value=mock_safari_response)
-            )
+@pytest.mark.asyncio
+async def test_safari_fetch_success(mock_httpx_client, mocker):
+    mock_client, mock_context = mock_httpx_client
+    checker = SafariVersionChecker()
+    mocker.patch.object(checker, "get_client", return_value=mock_context)
 
-            checker = SafariVersionChecker()
-            result = await checker.fetch_latest_version()
+    # Configure mock response
+    mock_client.get.return_value = MockResponse(200, MOCK_SAFARI_RESPONSE)
 
-            assert result is not None
-            assert result["version"] == "18.0"
-            assert "last_checked" in result
+    # Should skip beta and return 18.2
+    result = await checker.fetch_latest_version("macos")
+    assert result is not None
+    assert result["version"] == "18.2"
+    assert result["check_method"] == "api"
 
-    @pytest.mark.asyncio
-    async def test_fetch_latest_version_timeout(self):
-        """Test handling of timeout error."""
-        with patch("httpx.AsyncClient.get") as mock_get:
-            mock_get.side_effect = httpx.TimeoutException("Timeout")
 
-            checker = SafariVersionChecker()
-            result = await checker.fetch_latest_version()
+@pytest.mark.asyncio
+async def test_safari_fetch_error(mock_httpx_client, mocker):
+    mock_client, mock_context = mock_httpx_client
+    checker = SafariVersionChecker()
+    mocker.patch.object(checker, "get_client", return_value=mock_context)
 
-            assert result is None
+    # Configure error response
+    mock_client.get.return_value = MockResponse(500, None)
 
-    @pytest.mark.asyncio
-    async def test_fetch_latest_version_http_error(self):
-        """Test handling of HTTP error."""
-        with patch("httpx.AsyncClient.get") as mock_get:
-            mock_get.side_effect = httpx.HTTPError("HTTP Error")
+    result = await checker.fetch_latest_version("macos")
+    assert result is None
 
-            checker = SafariVersionChecker()
-            result = await checker.fetch_latest_version()
 
-            assert result is None
-
-    def test_read_current_data(self, safari_data):
-        """Test reading current data file."""
-        checker = SafariVersionChecker()
-        checker.data_file = safari_data
-
-        data = checker.read_current_data()
-        assert data["name"] == "Apple Safari"
-        assert data["versions"]["stable"]["version"] == "18.0"
-
-    @pytest.mark.asyncio
-    async def test_update_success(self, safari_data, mock_safari_response):
-        """Test successful update process."""
-        with patch("httpx.AsyncClient.get") as mock_get:
-            mock_get.return_value = Mock(
-                raise_for_status=Mock(), json=Mock(return_value=mock_safari_response)
-            )
-
-            checker = SafariVersionChecker()
-            checker.data_file = safari_data
-
-            success = await checker.update()
-            assert success is True
-
-            # Verify file was updated
-            with open(safari_data) as f:
-                updated_data = json.load(f)
-                assert updated_data["versions"]["stable"]["version"] == "18.0"
+def test_safari_supported_platforms():
+    checker = SafariVersionChecker()
+    platforms = checker.get_supported_platforms()
+    assert "macos" in platforms
+    assert "ios" in platforms
+    assert "windows" not in platforms

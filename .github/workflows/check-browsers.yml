@@ -26,13 +26,16 @@ jobs:
         pip install httpx jsonschema
 
     - name: Run Chrome version checker
-      run: python scripts/checkers/chrome_checker.py
+      run: python scripts/checkers/chrome.py
 
     - name: Run Firefox version checker
-      run: python scripts/checkers/firefox_checker.py
+      run: python scripts/checkers/firefox.py
 
     - name: Run Safari version checker
-      run: python scripts/checkers/safari_checker.py
+      run: python scripts/checkers/safari.py
+
+    - name: Run Edge version checker
+      run: python scripts/checkers/edge.py
 
     - name: Check for changes
       id: git-check
@@ -44,6 +47,6 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/browsers/*.json
+        git add data/*.json
         git commit -m "Update browser versions"
         git push
