@@ -1,0 +1,26 @@
+{
+  "name": "Apple Safari",
+  "identifier": "safari",
+  "type": "browser",
+  "platforms": [
+    "macos",
+    "ios"
+  ],
+  "versions": {
+    "platforms": {
+      "macos": {
+        "version": "18.2",
+        "check_url": "https://developer.apple.com/tutorials/data/index/safari-release-notes",
+        "check_method": "api"
+      },
+      "ios": {
+        "version": "18.2",
+        "check_url": "https://developer.apple.com/tutorials/data/index/safari-release-notes",
+        "check_method": "api"
+      }
+    }
+  },
+  "metadata": {
+    "last_checked": "2024-12-19T18:33:38.778546Z"
+  }
+}
