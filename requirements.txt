@@ -37,9 +37,12 @@ pytest==8.3.4
     #   version-tracker (pyproject.toml)
     #   pytest-asyncio
     #   pytest-cov
+    #   pytest-mock
 pytest-asyncio==0.25.0
     # via version-tracker (pyproject.toml)
 pytest-cov==6.0.0
+    # via version-tracker (pyproject.toml)
+pytest-mock==3.14.0
     # via version-tracker (pyproject.toml)
 referencing==0.35.1
     # via
