@@ -11,7 +11,7 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "133.0.6943.54",
+        "version": "133.0.6943.60",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions",
         "check_method": "api"
       },
@@ -33,6 +33,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-02-06T00:18:10.695641Z"
+    "last_checked": "2025-02-07T00:17:56.063109Z"
   }
 }
