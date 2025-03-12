@@ -11,28 +11,28 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "136.0",
+        "version": "136.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
         "check_method": "api"
       },
       "macos": {
-        "version": "136.0",
+        "version": "136.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
         "check_method": "api"
       },
       "ios": {
-        "version": "136.0",
+        "version": "136.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
         "check_method": "api"
       },
       "android": {
-        "version": "136.0",
+        "version": "136.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2025-03-11T00:18:57.746048Z"
+    "last_checked": "2025-03-12T00:18:38.300068Z"
   }
 }

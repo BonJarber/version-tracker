@@ -21,18 +21,18 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "134.0.6998.33",
+        "version": "134.0.6998.99",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/ios/channels/stable/versions",
         "check_method": "api"
       },
       "android": {
-        "version": "134.0.6998.39",
+        "version": "134.0.6998.95",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/android/channels/stable/versions",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2025-03-11T00:18:57.131563Z"
+    "last_checked": "2025-03-12T00:18:37.530429Z"
   }
 }
