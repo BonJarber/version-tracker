@@ -17,7 +17,7 @@
         "check_method": "api"
       },
       "macos": {
-        "version": "134.0.3124.68",
+        "version": "134.0.3124.77",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-03-18T00:18:54.522149Z"
+    "last_checked": "2025-03-19T00:19:17.150892Z"
   }
 }
