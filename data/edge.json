@@ -12,7 +12,7 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "134.0.3124.85",
+        "version": "134.0.3124.93",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -27,7 +27,7 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "134.0.3124.77",
+        "version": "134.0.3124.83",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-03-26T00:19:11.227312Z"
+    "last_checked": "2025-03-27T00:18:51.559874Z"
   }
 }
