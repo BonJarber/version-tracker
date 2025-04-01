@@ -9,18 +9,18 @@
   "versions": {
     "platforms": {
       "macos": {
-        "version": "18.3",
+        "version": "18.4",
         "check_url": "https://developer.apple.com/tutorials/data/index/safari-release-notes",
         "check_method": "api"
       },
       "ios": {
-        "version": "18.3",
+        "version": "18.4",
         "check_url": "https://developer.apple.com/tutorials/data/index/safari-release-notes",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2025-03-31T00:20:36.671352Z"
+    "last_checked": "2025-04-01T00:22:10.611222Z"
   }
 }
