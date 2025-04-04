@@ -12,12 +12,12 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "134.0.3124.93",
+        "version": "135.0.3179.54",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "macos": {
-        "version": "134.0.3124.95",
+        "version": "135.0.3179.54",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-04-03T00:19:00.690701Z"
+    "last_checked": "2025-04-04T00:19:28.782137Z"
   }
 }
