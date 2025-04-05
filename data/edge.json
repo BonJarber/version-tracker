@@ -22,23 +22,23 @@
         "check_method": "api"
       },
       "linux": {
-        "version": "134.0.3124.95",
+        "version": "135.0.3179.54",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "ios": {
-        "version": "134.0.3124.95",
+        "version": "135.0.3179.54",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "android": {
-        "version": "134.0.3124.77",
+        "version": "134.0.3124.105",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2025-04-04T00:19:28.782137Z"
+    "last_checked": "2025-04-05T00:18:52.358510Z"
   }
 }
