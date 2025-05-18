@@ -11,12 +11,12 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "138.0.3",
+        "version": "138.0.4",
         "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
         "check_method": "api"
       },
       "macos": {
-        "version": "138.0.3",
+        "version": "138.0.4",
         "check_url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
         "check_method": "api"
       },
@@ -33,6 +33,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-05-17T00:20:10.463055Z"
+    "last_checked": "2025-05-18T00:22:32.219049Z"
   }
 }
