@@ -21,18 +21,18 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "144.0",
+        "version": "144.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
         "check_method": "api"
       },
       "android": {
-        "version": "144.0",
+        "version": "144.0.1",
         "check_url": "https://product-details.mozilla.org/1.0/mobile_versions.json",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2025-10-21T00:20:29.883317Z"
+    "last_checked": "2025-10-22T00:20:55.601424Z"
   }
 }
