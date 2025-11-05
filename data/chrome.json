@@ -21,7 +21,7 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "142.0.7444.77",
+        "version": "142.0.7444.128",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/ios/channels/stable/versions",
         "check_method": "api"
       },
@@ -33,6 +33,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2025-11-04T00:20:20.703862Z"
+    "last_checked": "2025-11-05T00:21:13.062830Z"
   }
 }
