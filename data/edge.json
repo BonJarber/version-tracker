@@ -32,13 +32,13 @@
         "check_method": "api"
       },
       "android": {
-        "version": "143.0.3650.125",
+        "version": "143.0.3650.139",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-01-13T00:19:40.530314Z"
+    "last_checked": "2026-01-14T00:23:37.208724Z"
   }
 }
