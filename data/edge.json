@@ -22,7 +22,7 @@
         "check_method": "api"
       },
       "linux": {
-        "version": "143.0.3650.139",
+        "version": "144.0.3719.82",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-01-21T00:23:58.550087Z"
+    "last_checked": "2026-01-22T00:24:30.494395Z"
   }
 }
