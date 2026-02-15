@@ -12,17 +12,17 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "144.0.3719.115",
+        "version": "145.0.3800.58",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "macos": {
-        "version": "144.0.3719.115",
+        "version": "145.0.3800.58",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "linux": {
-        "version": "144.0.3719.115",
+        "version": "145.0.3800.58",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-02-14T00:28:37.134687Z"
+    "last_checked": "2026-02-15T00:30:11.717069Z"
   }
 }
