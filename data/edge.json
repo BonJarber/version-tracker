@@ -12,7 +12,7 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "146.0.3856.72",
+        "version": "146.0.3856.78",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -32,13 +32,13 @@
         "check_method": "api"
       },
       "android": {
-        "version": "146.0.3856.62",
+        "version": "146.0.3856.71",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-03-23T00:32:07.803081Z"
+    "last_checked": "2026-03-24T00:25:56.388943Z"
   }
 }
