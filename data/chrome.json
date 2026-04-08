@@ -11,12 +11,12 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "147.0.7727.50",
+        "version": "147.0.7727.56",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions",
         "check_method": "api"
       },
       "macos": {
-        "version": "147.0.7727.50",
+        "version": "147.0.7727.56",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions",
         "check_method": "api"
       },
@@ -33,6 +33,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-04-07T00:33:45.864868Z"
+    "last_checked": "2026-04-08T00:33:44.590970Z"
   }
 }
