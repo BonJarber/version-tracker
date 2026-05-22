@@ -16,7 +16,7 @@
         "check_method": "api"
       },
       "macos": {
-        "version": "148.0.7778.179",
+        "version": "149.0.7827.29",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions",
         "check_method": "api"
       },
@@ -33,6 +33,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-05-21T00:50:39.417266Z"
+    "last_checked": "2026-05-22T00:48:51.910151Z"
   }
 }
