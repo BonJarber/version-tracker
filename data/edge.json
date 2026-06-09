@@ -27,18 +27,18 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "148.0.3967.97",
+        "version": "149.0.4022.53",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "android": {
-        "version": "148.0.3967.97",
+        "version": "149.0.4022.53",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-06-08T00:55:38.816196Z"
+    "last_checked": "2026-06-09T00:48:56.791696Z"
   }
 }
