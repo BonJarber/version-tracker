@@ -11,28 +11,28 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "149.0.7827.156",
+        "version": "150.0.7871.24",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions",
         "check_method": "api"
       },
       "macos": {
-        "version": "149.0.7827.156",
+        "version": "150.0.7871.24",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions",
         "check_method": "api"
       },
       "ios": {
-        "version": "149.0.7827.137",
+        "version": "150.0.7871.34",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/ios/channels/stable/versions",
         "check_method": "api"
       },
       "android": {
-        "version": "149.0.7827.159",
+        "version": "150.0.7871.28",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/android/channels/stable/versions",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-06-17T00:57:40.747753Z"
+    "last_checked": "2026-06-18T00:57:05.959341Z"
   }
 }
