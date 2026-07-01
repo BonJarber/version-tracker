@@ -26,13 +26,13 @@
         "check_method": "api"
       },
       "android": {
-        "version": "150.0.7871.46",
+        "version": "150.0.7871.63",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/android/channels/stable/versions",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-06-30T00:50:53.783738Z"
+    "last_checked": "2026-07-01T00:53:44.348637Z"
   }
 }
