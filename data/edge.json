@@ -27,7 +27,7 @@
         "check_method": "api"
       },
       "ios": {
-        "version": "149.0.4022.96",
+        "version": "150.0.4078.50",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-07-05T03:18:26.771365Z"
+    "last_checked": "2026-07-06T03:26:03.903815Z"
   }
 }
