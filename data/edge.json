@@ -17,12 +17,12 @@
         "check_method": "api"
       },
       "macos": {
-        "version": "151.0.4129.78",
+        "version": "151.0.4129.86",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
       "linux": {
-        "version": "151.0.4129.78",
+        "version": "151.0.4129.86",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-08-13T01:51:23.477926Z"
+    "last_checked": "2026-08-14T01:48:49.239829Z"
   }
 }
