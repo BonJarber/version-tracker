@@ -11,7 +11,7 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "153.0.8010.12",
+        "version": "153.0.8010.27",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions",
         "check_method": "api"
       },
@@ -26,13 +26,13 @@
         "check_method": "api"
       },
       "android": {
-        "version": "153.0.8010.18",
+        "version": "153.0.8010.27",
         "check_url": "https://versionhistory.googleapis.com/v1/chrome/platforms/android/channels/stable/versions",
         "check_method": "api"
       }
     }
   },
   "metadata": {
-    "last_checked": "2026-09-03T03:02:13.975344Z"
+    "last_checked": "2026-09-04T03:02:00.058421Z"
   }
 }
