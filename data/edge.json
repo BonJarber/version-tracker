@@ -12,7 +12,7 @@
   "versions": {
     "platforms": {
       "windows": {
-        "version": "154.0.4258.62",
+        "version": "155.0.4283.45",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -22,7 +22,7 @@
         "check_method": "api"
       },
       "linux": {
-        "version": "154.0.4258.62",
+        "version": "155.0.4283.45",
         "check_url": "https://edgeupdates.microsoft.com/api/products",
         "check_method": "api"
       },
@@ -39,6 +39,6 @@
     }
   },
   "metadata": {
-    "last_checked": "2026-10-08T04:38:32.595394Z"
+    "last_checked": "2026-10-09T04:41:42.591140Z"
   }
 }
